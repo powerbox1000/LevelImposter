@@ -23,7 +23,6 @@
             <Private>false</Private>
         </Reference>
         <Reference Remove="$(AmongUs)\BepInEx\unhollowed\netstandard.dll;$(AmongUs)\BepInEx\unhollowed\Newtonsoft.Json.dll" />
-        <Reference Include="$(AmongUs)\BepInEx\plugins\Reactor.dll" />
     </ItemGroup>
 
     <ItemGroup>
