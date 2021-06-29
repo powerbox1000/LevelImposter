@@ -1,8 +1,9 @@
 ﻿using BepInEx;
 using BepInEx.IL2CPP;
 using HarmonyLib;
+using System;
+using UnityEngine.SceneManagement;
 using LevelImposter.DB;
-using Reactor;
 
 namespace LevelImposter
 {
@@ -17,6 +18,9 @@ namespace LevelImposter
 
         public override void Load()
         {
+			SceneManager.add_sceneLoaded((Action<Scene, LoadSceneMode>)((_, __) =>
+            ModManager.Instance.ShowModStamp()));
+			
             LILogger.Init();
             VersionCheck.CheckVersion();
             VersionCheck.CheckNewtonsoft();
